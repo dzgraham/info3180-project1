@@ -1,7 +1,5 @@
 # flask_starter
-Starter code for a new Flask Application
-
-Remember to always create a virtual environment and install the packages in your requirements file
+Project 1 for Daniel Graham 620171166
 
 ```bash
 $ python -m venv venv (you may need to use python3 instead)
