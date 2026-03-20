@@ -2,6 +2,10 @@
 
 Project 1 for Daniel Graham 620171166
 
+Login:
+username: dzgraham
+password: apassword
+
 ```bash
 $ python -m venv venv (you may need to use python3 instead)
 $ source venv/bin/activate (or .\venv\Scripts\activate on Windows)
