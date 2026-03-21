@@ -1,3 +1,54 @@
 body {
     padding-top: 5rem;
 }
+
+.form-login {
+    max-width: 450px;
+    padding: 15px;
+}
+
+.form-login input[type="text"] {
+    margin-bottom: -1px;
+    border-radius: 5;
+}
+
+.form-login input[type="password"] {
+    margin-bottom: 10px;
+    border-radius: 5;
+
+}
+
+/* Property Card Styles */
+.property-card-horizontal {
+    overflow: hidden;
+    border: none;
+    border-radius: 15px;
+}
+
+.property-img-container {
+    min-height: 300px;
+}
+
+.property-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-meta i {
+    width: 20px;
+    margin-right: 5px;
+    color: #6c757d;
+}
+
+.property-meta .fa-location-dot {
+    width: auto !important;
+    margin-right: 3;
+}
+
+.non_button{
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
