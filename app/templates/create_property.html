@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1 class="page-header">Add New Property</h1>
+
+{% include 'flash_messages.html' %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('create_property') }}" enctype="multipart/form-data">
+                    {{ form.csrf_token }}
+
+                    <div class="form-group mb-3">
+                        {{ form.title.label(class="form-label fw-bold") }}
+                        {{ form.title(class="form-control", placeholder="e.g. Beautiful 3-bedroom house") }}
+                    </div>
+
+                    <div class="form-group mb-3">
+                        {{ form.description.label(class="form-label fw-bold") }}
+                        {{ form.description(class="form-control", rows=4) }}
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                {{ form.bedrooms.label(class="form-label fw-bold") }}
+                                {{ form.bedrooms(class="form-control", placeholder="e.g. 3") }}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                {{ form.bathrooms.label(class="form-label fw-bold") }}
+                                {{ form.bathrooms(class="form-control", placeholder="e.g. 2") }}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                {{ form.property_type.label(class="form-label fw-bold") }}
+                                {{ form.property_type(class="form-select") }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                {{ form.location.label(class="form-label fw-bold") }}
+                                {{ form.location(class="form-control", placeholder="e.g. Kingston, Jamaica") }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                {{ form.price.label(class="form-label fw-bold") }}
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    {{ form.price(class="form-control") }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        {{ form.photo.label(class="form-label fw-bold") }}
+                        {{ form.photo(class="form-control", accept=".jpg,.jpeg,.png,.gif") }}
+                        <small class="text-muted">Allowed formats: JPG, JPEG, PNG, GIF</small>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.submit(class="btn btn-primary") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
